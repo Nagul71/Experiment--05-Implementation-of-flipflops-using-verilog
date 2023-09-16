@@ -112,6 +112,19 @@ Program for flipflops  and verify its truth table in quartus using Verilog progr
 Developed by: 
 RegisterNumber:  
 */
+```
+module exp5(S,R,Q,Qbar,clk);
+input S,R,clk;
+output reg Q,Qbar;
+initial Q = 0;
+initial Qbar = 1;
+always @(posedge clk)
+begin
+Q = S|(Q & (~R));
+Qbar = R|((Qbar) & (~S));
+end
+endmodule
+```
 
 
 
@@ -123,6 +136,7 @@ RegisterNumber:
 
 
 
+![Screenshot 2023-09-16 093834](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/6afdbb2d-19bf-4d9c-8932-639b5322eefa)
 
 
 
