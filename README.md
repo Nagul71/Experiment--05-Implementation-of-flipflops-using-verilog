@@ -141,7 +141,7 @@ Qbar=((~J)&(Qbar))|K&(~Qbar);
 end
 endmodule
 ```
-##T
+## T
 ```py
 module exp5(T,clk,Q,Qbar);
 input T,clk;
@@ -156,7 +156,7 @@ Qbar=((~T)&Qbar)|(T&(~Qbar));
 end
 endmodule
 ```
-##D
+## D
 ```py
 module exp5(D,clk,Q,Qbar);
 input D,clk;
@@ -224,3 +224,4 @@ endmodule
 
 
 ### RESULTS 
+Thus ,all the flipflops using verilog and validating their functionality using their functional tables are successfully executed.
