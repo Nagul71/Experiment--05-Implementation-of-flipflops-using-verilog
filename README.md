@@ -141,6 +141,36 @@ Qbar=((~J)&(Qbar))|K&(~Qbar);
 end
 endmodule
 ```
+##T
+```py
+module exp5(T,clk,Q,Qbar);
+input T,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=(T&(~Q))|((~T)&Q);
+Qbar=((~T)&Qbar)|(T&(~Qbar));
+end
+endmodule
+```
+##D
+```py
+module exp5(D,clk,Q,Qbar);
+input D,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=D;
+Qbar=~D;
+end
+endmodule
+```
 
 
 
@@ -153,6 +183,14 @@ endmodule
 
 ### JK FLIPFLOP RTL LOGIC
 ![JK](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/f40dad5d-b7bd-4e51-99c0-b85ce8bca4e4)
+
+### T FLIPFLOP RTL LOGIC
+![T](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/683181c0-8ab7-44d3-828e-6178f9827191)
+
+### D FLIPFLOP RTL LOGIC
+![Screenshot 2023-09-23 092848](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/023bb896-49ef-4404-b800-a1dc12ae7406)
+
+
 
 
 
@@ -168,6 +206,14 @@ endmodule
 
 ### JK TIMING DIAGRAM
 ![jk,time](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/b927445d-24c6-4384-a5bc-299fca9c5db8)
+
+### T TIMING DIAGRAM
+![Screenshot 2023-09-23 092306](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/1a9b4780-8ea8-423b-a898-b3b29768215b)
+
+### D TIMING DIAGRAM
+![Screenshot 2023-09-23 093221](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/0121e94f-088b-4513-a41c-c4f9322e41c1)
+
+
 
 
 
