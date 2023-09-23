@@ -109,10 +109,11 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: NAGUL K
+RegisterNumber: 212222230089 
 */
-```
+## SR
+```py
 module exp5(S,R,Q,Qbar,clk);
 input S,R,clk;
 output reg Q,Qbar;
@@ -125,6 +126,21 @@ Qbar = R|((Qbar) & (~S));
 end
 endmodule
 ```
+## JK
+```py
+module exp5(J,K,clk,Q,Qbar);
+input J,K,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=(J&(~Q))|((~K)&Q);
+Qbar=((~J)&(Qbar))|K&(~Qbar);
+end
+endmodule
+```
 
 
 
@@ -132,17 +148,27 @@ endmodule
 
 
 ### RTL LOGIC FOR FLIPFLOPS 
+### SR FLIPFLOP RTL LOGIC
+![Screenshot 2023-09-16 091829](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/895c0bf5-8ea5-48d8-85c7-8190fcbda6e7)
+
+### JK FLIPFLOP RTL LOGIC
+![JK](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/f40dad5d-b7bd-4e51-99c0-b85ce8bca4e4)
 
 
 
 
-![Screenshot 2023-09-16 093834](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/6afdbb2d-19bf-4d9c-8932-639b5322eefa)
 
 
 
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
+### SR TIMING DIAGRAM
+![Screenshot 2023-09-16 093834](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/6afdbb2d-19bf-4d9c-8932-639b5322eefa)
+
+### JK TIMING DIAGRAM
+![jk,time](https://github.com/Nagul71/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118661118/b927445d-24c6-4384-a5bc-299fca9c5db8)
+
 
 
 
